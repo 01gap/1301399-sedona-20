@@ -1,0 +1,29 @@
+.page__body {
+  .base-text-style();
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: @white;
+  min-width: @mobile-width;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: @desktop-width) {
+  .page__body {
+    background-color: @light-grey;
+  }
+
+  .page__shadow-container {
+    width: @desktop-width;
+    background-color: @white;
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+    margin: 0 auto;
+  }
+}

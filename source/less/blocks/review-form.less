@@ -1,0 +1,91 @@
+.review-form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.review-form__part-item {
+  margin: 0;
+  padding: 0;
+}
+
+.review-form__part-title {
+  .base-title-style();
+}
+
+.review-form__part-item--contactinfo {
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .review-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: @tablet-width - 60 * 2; // 648px
+    margin: 0 auto;
+  }
+
+  .review-form__part-title {
+    font-size: 21px;
+  }
+
+  .review-form__part--impression {
+    order: -2;
+    width: 50%;
+  }
+
+  .review-form__part--presentation {
+    order: 0;
+    width: 50%;
+  }
+
+  .review-form__part--contactinfo {
+    order: 0;
+    width: 100%;
+  }
+
+  .review-form__part-wrapper--contactinfo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .review-form__part-item--contactinfo {
+    width: 50%;
+  }
+
+  .review-form__part--sights-visited {
+    order: 0;
+    width: 100%;
+  }
+
+  .review-form__fieldset--sights-visited {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .review-form__fieldset--sights-visited .checkbox {
+    width: 50%;
+  }
+
+  .review-form__part--your-emotions {
+    order: 0;
+    width: 100%;
+  }
+
+  .review-form__button {
+    order: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-form {
+    width: @desktop-width - 120 * 2; //960px
+  }
+
+  .review-form__part-item--contactinfo {
+    flex-direction: row;
+  }
+}

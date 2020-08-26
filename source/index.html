@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="js/picturefill-min.js" async></script>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+  <body class="page__body">
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <div class="page__shadow-container">
+      <header class="page-header">
+        <a class="page-header__main-logo main-logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="main-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Эмблема города Седона">
+          </picture>
+        </a>
+        <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
+            <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
+            <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
+            <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a></li>
+          </ul>
+        </nav>
+        <div class="page-header__paysage-lettering">
+          <img class="page-header__welcome-lettering" src="img/text-sedona-index.svg" width="281" height="214" alt="Логотип туристического сайта города Седона">
+        </div>
+      </header>
+      <main class="page-main">
+        <h1 class="visually-hidden">Основные сведения о городе Седона и возможность бронирования отеля</h1>
+        <section class="advantages">
+          <h2 class="visually-hidden">Преимущества Седоны</h2>
+          <p class="advantages__intro">Седона &#8211; небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий большего!</p>
+          <p class="advantages__reasons">Рассмотрим 5 причин, по которым Седона&nbsp;круче, чем гранд каньон!</p>
+          <ol class="advantages__reasons-list reasons-list">
+            <li class="reasons-list__item reasons-list__item--detailed reasons-list__item--real-town">
+              <div class="reasons-list__item-wrapper reasons-list__item-wrapper--real-town">
+                <h3 class="reasons-list__title">Настоящий городок</h3>
+                <p class="reasons-list__number">&#8211; №1 &#8211;</p>
+                <p class="reasons-list__comment">Седона не аттракцион для туристов, там&nbsp;течет своя жизнь</p>
+              </div>
+              <div class="reasons-list__image-wrapper">
+                <picture>
+                  <!-- <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 320px)" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x" type="image/webp"> -->
+                  <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+                  <img class="reasons-list__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="320" height="260" alt="Традиционный деревянный дом с галереей">
+                </picture>
+              </div>
+              <ul class="reasons-list__further-comment further-comment">
+                <li class="further-comment__item further-comment__item--motel">
+                  <h4 class="further-comment__title">Жилье</h4>
+                  <p class="further-comment__description">Рекомендуем пожить в настоящем отеле, все как в кино!</p>
+                </li>
+                <li class="further-comment__item further-comment__item--souvenirs">
+                  <h4 class="further-comment__title">Сувениры</h4>
+                  <p class="further-comment__description">Не только китайского, но и местного производства!</p>
+                </li>
+                <li class="further-comment__item further-comment__item--food">
+                  <h4 class="further-comment__title">Еда</h4>
+                  <p class="further-comment__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </li>
+              </ul>
+            </li>
+            <li class="reasons-list__item reasons-list__item--detailed reasons-list__item--devils-bridge">
+              <div class="reasons-list__item-wrapper reasons-list__item-wrapper--devils-bridge">
+                <h3 class="reasons-list__title">Там есть Мост Дьявола</h3>
+                <p class="reasons-list__number">&#8211; №2 &#8211;</p>
+                <p class="reasons-list__comment">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              </div>
+              <div class="reasons-list__image-wrapper">
+                <picture>
+                  <!-- <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 320px)" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x" type="image/webp"> -->
+                  <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+                  <img class="reasons-list__image reasons-list__image--devils-bridge" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Мост Дьявола, представляющий из себя скалистый выступ над пропастью">
+                </picture>
+              </div>
+            </li>
+            <li class="reasons-list__item reasons-list__item--notdetailed reasons-list__item--small-square">
+              <h3 class="reasons-list__title">Небольшая площадь</h3>
+              <p class="reasons-list__number">&#8211; №3 &#8211;</p>
+              <p class="reasons-list__comment">Все интересные места находятся очень близко</p>
+            </li>
+            <li class="reasons-list__item reasons-list__item--notdetailed reasons-list__item--nice-road">
+              <h3 class="reasons-list__title">Красивая дорога</h3>
+              <p class="reasons-list__number">&#8211; №4 &#8211;</p>
+              <p class="reasons-list__comment">Ехать в Седону из Лас-Вегаса совсем&nbsp;не скучно!</p>
+            </li>
+            <li class="reasons-list__item reasons-list__item--notdetailed reasons-list__item--few-tourists">
+              <h3 class="reasons-list__title">Мало туристов</h3>
+              <p class="reasons-list__number">&#8211; №5 &#8211;</p>
+              <p class="reasons-list__comment">Большинство едет в Гранд Каньон и&nbsp;толпится там</p>
+            </li>
+          </ol>
+        </section>
+        <section class="main-booking">
+          <h2 class="visually-hidden">Забронируйте гостиницу</h2>
+          <p class="main-booking__question">Заинтересовались?</p>
+          <p class="main-booking__solution">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения&nbsp;гостиниц в Седоне</p>
+          <a class="main-booking__search-button button button--button-like" href="#">Найти гостиницу</a>
+          <picture>
+            <!-- <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 320px)" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x" type="image/webp"> -->
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img class="main-booking__map" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта штата Аризона">
+          </picture>
+        </section>
+      </main>
+      <footer class="page-footer">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__hash-tag" href="#">#VisitSedona</a>
+          <div class="page-footer__wrapper-social social">
+            <a class="social__item social__item--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+            <a class="social__item social__item--fb" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+            <a class="social__item social__item--youtube" href="#"><span class="visually-hidden">Наш youtube-канал</span></a>
+          </div>
+          <p class="page-footer__developed-by">Разработано<a class="page-footer__htmlacademy-logo htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden"> Html Academy</span></a></p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main-nav.js"></script>
   </body>
 </html>

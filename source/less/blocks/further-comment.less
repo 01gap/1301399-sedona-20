@@ -1,0 +1,99 @@
+.further-comment {
+  .list-reset();
+  color: @black;
+  background-color: @white;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-top: 35px;
+}
+
+.further-comment__item {
+  position: relative;
+  padding-left: 70px;
+}
+// WARNING: этот псевдоэлемент не появляется в DOM, соответственно, на странице ничего не появляется... Много раз проверила, не вижу, в чем ошибка
+.further-comment__item--motel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37px;
+  height: 36px;
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.further-comment__item--souvenirs::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37px;
+  height: 36px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.further-comment__item--food::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37px;
+  height: 36px;
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.further-comment__title {
+  .base-title-style();
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.further-comment__description {
+  line-height: 21px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .further-comment {
+    display: flex;
+    flex-wrap: wrap;
+    width: 680px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .further-comment__item {
+    padding-top: 160px;
+    padding-left: 0;
+  }
+
+  .further-comment__item--souvenirs {
+    order: 1;
+  }
+
+  .further-comment__title {
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .further-comment__description {
+    text-align: center;
+    width: 165px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .further-comment {
+    width: 1200px;
+  }
+}

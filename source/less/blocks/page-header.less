@@ -1,0 +1,157 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  background-color: @white;
+}
+
+.page-header__main-nav {
+  order: -1;
+}
+
+.page-header__paysage-lettering {
+  position: relative;
+  width: 320px;
+  height: 390px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+// что-то не так с этим треугольником: как будто он на несколько пикселей меньше, чем ширина макета
+.page-header__paysage-lettering::after,
+.page-header__paysage-lettering-min::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  height: 26px;
+  background-size: 102%;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  background-position: 0 1px;
+  background-repeat: no-repeat;
+}
+
+.page-header__paysage-lettering-min {
+  position: relative;
+  width: 320px;
+  height: 158px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 320px 158px;
+  }
+}
+
+.page-header__welcome-lettering {
+  display: block;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+
+.page-header__lettering {
+  margin: 0 auto;
+  margin-top: 52px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: @tablet-width;
+  }
+
+  .page-header__main-nav {
+    order: 0;
+  }
+
+  .page-header__welcome-lettering {
+    width: 460px;
+    height: 350px;
+    margin-top: 77px;
+  }
+
+  .page-header__paysage-lettering {
+    width: @tablet-width;
+    height: 518px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: @tablet-width 518px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  .page-header__paysage-lettering-min {
+    width: @tablet-width;
+    height: 290px;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: @tablet-width 290px;
+    }
+  }
+
+  .page-header__paysage-lettering::after,
+  .page-header__paysage-lettering-min::after {
+    width: 768px;
+    height: 57px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+    background-position: 0 0;
+    background-size: 100%;
+  }
+
+  .page-header__lettering {
+    width: 460px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 94px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+  }
+
+  .page-header__paysage-lettering {
+    width: @desktop-width;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: @desktop-width 518px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  .page-header__paysage-lettering-min {
+    width: @desktop-width;
+    height: 300px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: @desktop-width 300px;
+    }
+  }
+
+  .page-header__paysage-lettering::after,
+  .page-header__paysage-lettering-min::after {
+    width: 1200px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  }
+
+  .page-header__lettering {
+    margin-top: 102px;
+  }
+}

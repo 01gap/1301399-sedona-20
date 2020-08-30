@@ -6,6 +6,7 @@
 
 .review-form__part-item {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -13,8 +14,18 @@
   .base-title-style();
 }
 
+.review-form__part-item--presentation {
+  align-items: center;
+}
+
 .review-form__part-item--contactinfo {
   flex-direction: column;
+  input {
+    width: 100%;
+  }
+  label {
+    margin-left: 20px;
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -36,7 +36,7 @@
 
 .site-list__item a[href]:active {
   background-color: @base-blue-down;
-  color: @white-lettering-down;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
@@ -77,7 +77,8 @@
 
   .site-list__item a[href]:active {
     background-color: @white;
-    color: @menu-lettering-down;
+    color: @black;
+    opacity: 0.3;
   }
 
   .site-list__item--active {
@@ -88,7 +89,8 @@
     }
 
     &:active {
-      color: @menu-lettering-activedown;
+      color: @menu-lettering-active;
+      opacity: 0.3;
     }
   }
 }

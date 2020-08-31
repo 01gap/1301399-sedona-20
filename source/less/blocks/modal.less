@@ -1,5 +1,68 @@
 .modal__title {
   .base-title-style();
+  margin: 0;
+  padding-top: 40px;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  width: @mobile-width;
+  background-color: @white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.modal--success {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.modal--closed {
+  display: none;
+}
+
+.modal__message {
+  width: 245px;
+  margin: 0;
+  padding: 40px;
+}
+
+.modal__background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: @mobile-width;
+  min-height: 98px;
+  background-color: @light-grey;
+}
+
+.modal__button {
+  display: block;
+  width: 280px;
+  padding: 20px;
+  font-size: 18px;
+
+  &:hover {
+    background-color: @base-blue-hover;
+  }
+
+  &:active {
+    background-color: @base-blue-down;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.modal__button--success {
+  width: 280px;
+}
+
+.modal__button--error {
+  width: 180px;
+  margin-left: 70px;
+  margin-bottom: 35px;
 }
 
 @media (min-width: @tablet-width) {

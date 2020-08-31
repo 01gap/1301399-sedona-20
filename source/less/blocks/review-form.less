@@ -4,6 +4,20 @@
   padding: 0;
 }
 
+.review-form__part {
+  position: relative;
+}
+
+.review-form__part::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: @mobile-width;
+  height: 1px;
+  background-color: @less-light-grey;
+}
+
 .review-form__part-item {
   margin: 0;
   margin-bottom: 20px;
@@ -19,22 +33,33 @@
 }
 
 .review-form__part-item--contactinfo {
+  // где я успела сделать flex ? в textfield.less
   flex-direction: column;
-  input {
-    width: 100%;
-  }
+
   label {
     margin-left: 20px;
   }
 }
 
+.review-form__button {
+  display: block;
+  width: 280px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.review-form__footnote {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .review-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: @tablet-width - 60 * 2; // 648px
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .review-form__part::before {
+    display: none;
   }
 
   .review-form__part-title {
@@ -43,33 +68,14 @@
 
   .review-form__part--impression {
     order: -2;
-    width: 50%;
-  }
-
-  .review-form__part--presentation {
-    order: 0;
-    width: 50%;
   }
 
   .review-form__part--contactinfo {
-    order: 0;
-    width: 100%;
-  }
-
-  .review-form__part-wrapper--contactinfo {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .review-form__part-item--contactinfo {
-    width: 50%;
+    grid-column: 1 / span 2;
   }
 
   .review-form__part--sights-visited {
-    order: 0;
-    width: 100%;
+    grid-column: 1 / span 2;
   }
 
   .review-form__fieldset--sights-visited {
@@ -82,21 +88,27 @@
   }
 
   .review-form__part--your-emotions {
-    order: 0;
-    width: 100%;
-  }
-
-  .review-form__button {
-    order: 0;
+    grid-column: 1 / span 2;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .review-form {
-    width: @desktop-width - 120 * 2; //960px
-  }
-
   .review-form__part-item--contactinfo {
     flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    label {
+      margin-left: 0;
+    }
+  }
+
+  .review-form__part-wrapper--contactinfo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .review-form__fieldset--sights-visited .checkbox {
+    width: 25%;
   }
 }

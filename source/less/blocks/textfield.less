@@ -5,14 +5,16 @@
 .textfield__input {
   font-family: inherit;
   font-size: 18px;
+  font-weight: 700;
+  color: @black;
   display: block;
   box-sizing: border-box;
   min-height: 58px;
+  min-width: 0;
   border-style: none;
   background-color: @light-grey;
   border: 4px solid @light-grey;
-  font-weight: 700;
-  color: @black;
+  padding-left: 15px;
 
   &:hover {
     background-color: @less-light-grey;
@@ -26,6 +28,41 @@
   }
 }
 
+.textfield__input--tel,
+.textfield__input--email {
+  width: calc(100% - 58px);
+  margin-right: 58px;
+}
+
+.textfield__input-wrapper--tel,
+.textfield__input-wrapper--email {
+  position: relative;
+}
+
+.textfield__input-wrapper--tel::before,
+.textfield__input-wrapper--email::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  z-index: -1;
+}
+
+.textfield__input-wrapper--tel::after {
+  content: "";
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icon-phone.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 .textfield__label {
   display: block;
   box-sizing: border-box;
@@ -37,4 +74,10 @@
 .textfield__input::placeholder {
   color: @black;
   opacity: 1;
+}
+
+@media (min-width: @desktop-width) {
+  .textfield__hidden {
+    display: none;
+  }
 }

@@ -41,15 +41,15 @@
           <form class="review-form" action="https://echo.htmlacademy.ru" method="get">
             <div class="review-form__part review-form__part--presentation">
               <h2 class="review-form__part-title">Представьтесь:</h2>
-              <div class="review-form__part-item review-form__part-item--presentation textfield">
+              <div class="review-form__label-input review-form__label-input--presentation textfield">
                 <label class="textfield__label" for="first-name-id">Имя*:</label>
                 <input class="textfield__input" id="first-name-id" type="text" name="first-name" value="" placeholder="Петр" required>
               </div>
-              <div class="review-form__part-item review-form__part-item--presentation textfield">
+              <div class="review-form__label-input review-form__label-input--presentation textfield">
                 <label class="textfield__label" for="surname-id">Фамилия*:</label>
                 <input class="textfield__input" id="surname-id" type="text" name="surname" value="" placeholder="Иванов" required>
               </div>
-              <div class="review-form__part-item review-form__part-item--presentation textfield">
+              <div class="review-form__label-input review-form__label-input--presentation textfield">
                 <label class="textfield__label" for="patronymic-id">Отчество:</label>
                 <input class="textfield__input" id="patronymic-id" type="text" name="patronymic" value="" placeholder="Александрович">
               </div>
@@ -57,13 +57,13 @@
             <div class="review-form__part review-form__part--contactinfo">
               <h2 class="review-form__part-title">Контактная информация:</h2>
               <div class="review-form__part-wrapper review-form__part-wrapper--contactinfo">
-                <div class="review-form__part-item review-form__part-item--contactinfo review-form__part-item--tel textfield">
+                <div class="review-form__label-input review-form__label-input--contactinfo review-form__label-input--tel textfield">
                   <label class="textfield__label" for="tel-id"><span class="textfield__hidden">Контактный </span>телефон*:</label>
                   <div class="textfield__input-wrapper textfield__input-wrapper--tel">
                     <input class="textfield__input textfield__input--tel" id="tel-id" type="tel" name="tel" value="" placeholder="Введите телефон" required>
                   </div>
                 </div>
-                <div class="review-form__part-item review-form__part-item--contactinfo review-form__part-item--email textfield">
+                <div class="review-form__label-input review-form__label-input--contactinfo review-form__label-input--email textfield">
                   <label class="textfield__label" for="email-id">Электронная почта*:</label>
                   <div class="textfield__input-wrapper textfield__input-wrapper--email">
                     <input class="textfield__input textfield__input--email" id="email-id" type="email" name="email" value="" placeholder="Введите e-mail" required>
@@ -74,15 +74,15 @@
             <div class="review-form__part review-form__part--impression">
               <h2 class="review-form__part-title">Ваше общее впечатление:</h2>
               <fieldset class="review-form__fieldset">
-                <div class="review-form__part-item radio">
+                <div class="review-form__label-input radio">
                   <input class="radio__input visually-hidden--strong" id="mainly-positive-id" type="radio" name="impression" value="mainly-positive" checked>
                   <label class="radio__label" for="mainly-positive-id">Скорее положительное</label>
                 </div>
-                <div class="review-form__part-item radio">
+                <div class="review-form__label-input radio">
                   <input class="radio__input visually-hidden--strong" id="mainly-negative-id" type="radio" name="impression" value="mainly-negative">
                   <label class="radio__label" for="mainly-negative-id">Скорее отрицательное</label>
                 </div>
-                <div class="review-form__part-item radio">
+                <div class="review-form__label-input radio">
                   <input class="radio__input visually-hidden--strong" id="hard-to-say-id" type="radio" name="impression" value="hard-to-say">
                   <label class="radio__label" for="hard-to-say-id">Затрудняюсь ответить</label>
                 </div>
@@ -91,19 +91,19 @@
             <div class="review-form__part review-form__part--sights-visited">
               <h2 class="review-form__part-title">Посещенные достопримечательности:</h2>
               <fieldset class="review-form__fieldset review-form__fieldset--sights-visited">
-                <div class="review-form__part-item checkbox">
+                <div class="review-form__label-input checkbox">
                   <input class="checkbox__input visually-hidden--strong" id="devils-bridge-id" type="checkbox" name="devils-bridge" checked>
                   <label class="checkbox__label" for="devils-bridge-id">Мост Дьявола</label>
                 </div>
-                <div class="review-form__part-item checkbox">
+                <div class="review-form__label-input checkbox">
                   <input class="checkbox__input visually-hidden--strong" id="mountain-bell-id" type="checkbox" name="mountain-bell" checked>
                   <label class="checkbox__label" for="mountain-bell-id">Гора-Колокол</label>
                 </div>
-                <div class="review-form__part-item checkbox">
+                <div class="review-form__label-input checkbox">
                   <input class="checkbox__input visually-hidden--strong" id="slide-park-id" type="checkbox" name="slide-park" checked>
                   <label class="checkbox__label" for="slide-park-id">Слайд-парк</label>
                 </div>
-                <div class="review-form__part-item checkbox">
+                <div class="review-form__label-input checkbox">
                   <input class="checkbox__input visually-hidden--strong" id="red-rocks-id" type="checkbox" name="red-rocks">
                   <label class="checkbox__label" for="red-rocks-id">Красные скалы</label>
                 </div>
@@ -118,14 +118,16 @@
           </form>
         </section>
         <section class="modal modal--error modal--closed">
-          <h2 class="modal__title">Что-то пошло не так!</h2>
-          <p class="modal__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-          <button class="modal__button modal__button--error button" type="button" name="button">Ok</button>
+          <div class="modal__wrapper modal__wrapper--error">
+            <h2 class="modal__title modal__title--error">Что-то пошло не так!</h2>
+            <p class="modal__message modal__message--error">Проверьте поля, выделенные красным, скорее всего вы забыли&nbsp;их заполнить</p>
+            <button class="modal__button modal__button--error button" type="button" name="button">Ok</button>
+          </div>
         </section>
         <section class="modal modal--success modal--closed">
-          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-          <p class="modal__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте</p>
-          <div class="modal__background">
+          <div class="modal__wrapper modal__wrapper--success">
+            <h2 class="modal__title modal__title--success">Ваш отзыв отправлен!</h2>
+            <p class="modal__message modal__message--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
             <button class="modal__button modal__button--success button" type="button" name="button">Закрыть окно</button>
           </div>
         </section>

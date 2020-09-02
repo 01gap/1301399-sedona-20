@@ -4,6 +4,65 @@
   width: 153px;
 }
 
-.social-item {
+.social__item {
+  position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: @base-blue;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @base-blue-hover;
+  }
+
+  &:active {
+    background-color: @base-blue-down;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.social__item--twitter::before {
+  width: 17.5px;
+  height: 14.57px;
+  background-image: url("../img/icon-twitter.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.social__item--fb::before {
+  width: 8.7px;
+  height: 18.9px;
+  background-image: url("../img/icon-facebook.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.social__item--youtube::before {
+  width: 19.91px;
+  height: 14px;
+  background-image: url("../img/icon-youtube.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }

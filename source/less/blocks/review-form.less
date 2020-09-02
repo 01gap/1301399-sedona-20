@@ -18,7 +18,7 @@
   background-color: @less-light-grey;
 }
 
-.review-form__part-item {
+.review-form__label-input {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -28,11 +28,14 @@
   .base-title-style();
 }
 
-.review-form__part-item--presentation {
+.review-form__label-input--presentation {
   align-items: center;
+  input {
+    flex-grow: 1;
+  }
 }
 
-.review-form__part-item--contactinfo {
+.review-form__label-input--contactinfo {
   // где я успела сделать flex ? в textfield.less
   flex-direction: column;
 
@@ -53,6 +56,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .review-form__footnote {
+    display: block;
+    margin: 0;
+  }
+
   .review-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -93,20 +101,28 @@
 }
 
 @media (min-width: @desktop-width) {
-  .review-form__part-item--contactinfo {
+  .review-form__label-input--contactinfo {
     flex-direction: row;
     align-items: center;
+    justify-content: start;
     width: 100%;
 
     label {
       margin-left: 0;
     }
+
+    // input {
+    //   flex-grow: 1;
+    // }
   }
 
   .review-form__part-wrapper--contactinfo {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // justify-content: space-between;
   }
+
+  .review-form__label-input--contanctinfo
 
   .review-form__fieldset--sights-visited .checkbox {
     width: 25%;

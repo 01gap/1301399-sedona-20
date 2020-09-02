@@ -1,10 +1,16 @@
 .page-footer {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  justify-content: center;
+  // align-items: flex-start;
   color: @black;
   width: @mobile-width - 2 * 20; //280px
   margin: 0 auto;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
 
 .page-footer__hash-tag {
@@ -12,25 +18,64 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  padding-top: 30px;
+  // margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.page-footer__wrapper-social {
+  margin-bottom: 50px;
+}
+
+.page-footer__developed-by {
+  position: relative;
+  text-align: right;
+  margin: 0;
+  padding-right: 35px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 26.9px;
+    height: 34.1px;
+    top: -5px;
+    // right: 10px;
+    right: 0;
+    background-image: url("../img/logo-htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     width: @tablet-width - 60 * 2; // 648px;
-    justify-content: space-between;
-    flex-direction: row;
+
   }
 
   .page-footer__wrapper {
-    width: 100%;
-    display: flex;
+    width: @tablet-width - 60 * 2;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 36px;
+    margin-bottom: 36px;
   }
 
   .page-footer__wrapper-social {
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .page-footer__developed-by {
+    margin: 0;
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .page-footer__hash-tag {
+    margin: 0;
   }
 }
 

@@ -30,25 +30,15 @@
 
 .textfield__input--tel,
 .textfield__input--email {
-  width: calc(100% - 58px);
-  margin-right: 58px;
+  width: 100%;
 }
 
 .textfield__input-wrapper--tel,
 .textfield__input-wrapper--email {
   position: relative;
-}
-
-.textfield__input-wrapper--tel::before,
-.textfield__input-wrapper--email::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 58px;
-  height: 58px;
-  background-color: #e6e6e6;
-  z-index: -1;
+  flex-grow: 1;
+  padding-right: 58px;
+  background-color: @less-light-grey;
 }
 
 .textfield__input-wrapper--tel::after {

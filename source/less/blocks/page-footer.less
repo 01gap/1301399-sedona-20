@@ -26,23 +26,31 @@
   margin-bottom: 50px;
 }
 
-.page-footer__developed-by {
-  position: relative;
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+  // position: relative;
   text-align: right;
-  margin: 0;
-  padding-right: 35px;
+  margin: 0 auto;
+  // padding-right: 35px;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 26.9px;
-    height: 34.1px;
-    top: -5px;
-    // right: 10px;
-    right: 0;
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+.page-footer__developed {
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.page-footer__logo-htmlacademy {
+  width: 26.9px;
+  height: 34.1px;
+  fill: @black;
+
+  &:hover {
+    fill: @base-blue;
+  }
+
+  &:active {
+    fill: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -66,7 +74,7 @@
     margin: 0;
   }
 
-  .page-footer__developed-by {
+  .page-footer__copyright {
     margin: 0;
 
     &::after {

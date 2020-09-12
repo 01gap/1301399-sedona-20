@@ -128,4 +128,28 @@
   .photos__image--large {
     width: 1200px;
   }
+
+  .photos__figure {
+    position: relative;
+  }
+
+  .photos__figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-height: 80px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .photos__list-item:nth-child(2n+3) .photos__figcaption {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .photos__item-title,
+  .photos__item-author {
+    color: @white;
+    opacity: 1;
+    z-index: 3;
+  }
 }

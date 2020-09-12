@@ -17,7 +17,26 @@
 
 .main-booking__map {
   display: block;
-  padding-bottom: 35px;
+}
+
+.main-booking__map-wrapper {
+  position: relative;
+  margin-bottom: 35px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    width: 27px;
+    height: 27px;
+    margin-top: -14.5px;
+    margin-left: -14.5px;
+    background-color: @base-blue;
+    border-radius: 50%;
+    border: 5px solid @white;
+  }
 }
 
 .main-booking__search-button {

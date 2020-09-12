@@ -36,6 +36,7 @@
 .textfield__input-wrapper--tel,
 .textfield__input-wrapper--email {
   position: relative;
+  box-sizing: border-box;
   flex-grow: 1;
   padding-right: 58px;
   background-color: @less-light-grey;
@@ -44,11 +45,23 @@
 .textfield__input-wrapper--tel::after {
   content: "";
   position: absolute;
-  bottom: 18px;
-  right: 18px;
+  bottom: 20px;
+  right: 20px;
   width: 18px;
   height: 18px;
   background-image: url("../img/icon-phone.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.textfield__input-wrapper--email::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icon-mail.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -69,5 +82,11 @@
 @media (min-width: @desktop-width) {
   .textfield__hidden {
     display: none;
+  }
+
+  .textfield__input-wrapper--tel,
+  .textfield__input-wrapper--email {
+    flex-grow: 0;
+    width: 648px;
   }
 }

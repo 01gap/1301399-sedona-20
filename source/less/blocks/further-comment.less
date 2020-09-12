@@ -11,41 +11,44 @@
   position: relative;
   padding-left: 70px;
 }
-// WARNING: этот псевдоэлемент не появляется в DOM, соответственно, на странице ничего не появляется... Много раз проверила, не вижу, в чем ошибка
+
+.further-comment__item::before {
+  left: 20px;
+  top: -10px;
+}
+
 .further-comment__item--motel::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 37px;
-  height: 36px;
+  width: 39px;
+  height: 36.83px;
   background-image: url("../img/icon-house.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: 39px 36.83px;
 }
 
 .further-comment__item--souvenirs::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 37px;
-  height: 36px;
+  left: 25px;
+  width: 32px;
+  height: 38px;
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: 32px 38px;
 }
 
 .further-comment__item--food::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 37px;
-  height: 36px;
+  width: 40px;
+  height: 35px;
   background-image: url("../img/icon-burger.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-size: 40px 35px;
 }
 
 .further-comment__title {
@@ -68,8 +71,9 @@
   .further-comment {
     display: flex;
     flex-wrap: wrap;
-    width: 680px;
-    margin: 0 auto;
+    width: 700px;
+    margin-left: 30px;
+    margin-right: 30px;
     margin-bottom: 40px;
     padding: 0;
     justify-content: space-between;
@@ -78,6 +82,11 @@
   .further-comment__item {
     padding-top: 160px;
     padding-left: 0;
+  }
+
+  .further-comment__item::before {
+    left: 65px;
+    top: 50px;
   }
 
   .further-comment__item--souvenirs {
@@ -91,7 +100,25 @@
 
   .further-comment__description {
     text-align: center;
-    width: 165px;
+    width: 200px;
+  }
+
+  .further-comment__item--motel::before {
+    width: 75px;
+    height: 72px;
+    background-size: 75px 72px;
+  }
+
+  .further-comment__item--souvenirs::before {
+    width: 64px;
+    height: 75px;
+    background-size: 64px 75px;
+  }
+
+  .further-comment__item--food::before {
+    width: 76px;
+    height: 68px;
+    background-size: 76px 68px;
   }
 }
 

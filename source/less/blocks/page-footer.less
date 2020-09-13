@@ -10,7 +10,7 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 38px;
 }
 
 .page-footer__hash-tag {
@@ -23,20 +23,20 @@
 }
 
 .page-footer__wrapper-social {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .page-footer__copyright {
   display: flex;
   align-items: center;
-  // position: relative;
+  // justify-content: center;
   text-align: right;
   margin: 0 auto;
   // padding-right: 35px;
 }
 
 .page-footer__developed {
-  padding-right: 10px;
+  padding-right: 12px;
   padding-bottom: 10px;
 }
 
@@ -82,6 +82,10 @@
     }
   }
 
+  .page-footer__developed {
+    padding-bottom: 0;
+  }
+
   .page-footer__hash-tag {
     margin: 0;
   }
@@ -91,5 +95,10 @@
   .page-footer {
     width: @desktop-width;
     background-color: @white;
+  }
+
+  .page-footer__wrapper {
+    width: @desktop-width - 120px * 2; // 960px
+    // margin: 0 auto;
   }
 }

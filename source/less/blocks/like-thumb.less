@@ -1,6 +1,7 @@
 .like-thumb {
   display: flex;
-  margin-bottom: 20px;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
 .like-thumb__like-counter {
@@ -8,14 +9,34 @@
   padding-left: 14px;
 }
 
-// WARNING: картинка меняет свой цвет в десктопной версии; значит ли это, что лучше добавить эту свг в разметку?
 .like-thumb__button {
   display: block;
   width: 23px;
-  height: 21px;
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.3;
+  padding: 0;
   border-style: none;
+  background-color: transparent;
+}
+
+.like-thumb__image {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+.like-thumb {
+  align-items: center;
+}
+
+  .like-thumb__like-counter {
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .like-thumb__image {
+    fill: @white;
+  }
+
+  .like-thumb__like-counter {
+    color: @white;
+  }
 }

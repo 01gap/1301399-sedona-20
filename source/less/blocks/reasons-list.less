@@ -19,14 +19,14 @@
 
 .reasons-list__item--detailed .reasons-list__title {
   color: @white;
-  padding-top: 55px;
+  padding-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
 .reasons-list__item-wrapper--real-town {
   position: relative;
-  padding-top: 15px;
+  // padding-top: 15px;
 }
 
 .reasons-list__item-wrapper--real-town::before {
@@ -53,10 +53,10 @@
 
 .reasons-list__comment {
   margin: 0;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-top: 17px;
+  padding-bottom: 38px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .reasons-list__number,
@@ -79,6 +79,12 @@
     height: 1px;
     background-color: rgba(0, 0, 0, 0.1);
   }
+
+  .reasons-list__comment {
+    width: 250px;
+    margin: 0 auto;
+    padding-bottom: 27px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -90,7 +96,7 @@
   .reasons-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: @tablet-width;
   }
 
@@ -98,20 +104,18 @@
   .reasons-list__item--devils-bridge {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: @tablet-width;
   }
 
   .reasons-list__item-wrapper,
-  .reasons-list__item--small-square,
-  .reasons-list__item--nice-road,
-  .reasons-list__item--few-tourists {
+  .reasons-list__item--notdetailed {
     width: @tablet-width / 3;
   }
 
   .reasons-list__image {
     width: 2 / 3 * @tablet-width; // 512px
-    height: 256px;
+    // object-fit: cover;
   }
 
   .reasons-list__item-wrapper--devils-bridge {
@@ -124,10 +128,39 @@
 
   .reasons-list__title {
     font-size: 21px;
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 42px;
+  }
+
+  .reasons-list__number {
+    padding-top: 13px;
+  }
+
+  .reasons-list__comment {
+    padding-top: 23px;
+  }
+
+  .reasons-list__item--notdetailed .reasons-list__comment {
+    padding-bottom: 43px;
   }
 
   .reasons-list__item--detailed .reasons-list__title {
-    padding-top: 45px;
+    padding-top: 40px;
+    // width: 150px;
+    // margin: 0 auto;
+  }
+
+  .reasons-list__comment {
+    .reasons-list__item--real-town & {
+      width: 200px;
+      margin: 0 auto;
+    }
+    .reasons-list__item--notdetailed &,
+    .reasons-list__item--devils-bridge & {
+      width: 180px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -145,9 +178,41 @@
     width: @desktop-width / 3;
   }
 
+  .reasons-list__item--detailed .reasons-list__title {
+    padding-top: 46px;
+  }
+
+  .reasons-list__item--devils-bridge .reasons-list__title {
+    padding-top: 50px;
+  }
+
+  .reasons-list__comment {
+    .reasons-list__item--real-town & {
+      width: 280px;
+    }
+
+    .reasons-list__item--devils-bridge & {
+      width: 220px;
+    }
+
+    .reasons-list__item--notdetailed & {
+      width: 290px;
+      padding-bottom: 63px;
+    }
+  }
+
   .reasons-list__image {
     width: 2 / 3 * @desktop-width; // 800px
+    height: 400px;
     object-fit: cover;
+  }
+
+  .reasons-list__item--real-town .reasons-list__image {
+    object-position: 0 -70px;
+  }
+
+  .reasons-list__item--devils-bridge .reasons-list__image {
+    object-position: 0 -15px;
   }
 
   .reasons-list__image-wrapper {

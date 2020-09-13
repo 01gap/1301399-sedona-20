@@ -25,7 +25,6 @@
   }
 }
 
-// что-то не так с этим треугольником: как будто он на несколько пикселей меньше, чем ширина макета
 .page-header__paysage-lettering::after,
 .page-header__paysage-lettering-min::after {
   content: "";
@@ -36,7 +35,7 @@
   height: 26px;
   background-size: 102%;
   background-image: url("../img/bg-intro-triangle-mobile.svg");
-  background-position: 0 1px;
+  background-position: 0 0;
   background-repeat: no-repeat;
 }
 
@@ -46,7 +45,7 @@
   height: 158px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");

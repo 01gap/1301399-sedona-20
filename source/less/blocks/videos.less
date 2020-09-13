@@ -1,21 +1,39 @@
 .videos__p-title {
   .base-title-style();
-  margin: 0;
-  padding: 0;
+  margin-top: 32px;
+  margin-bottom: 30px;
 }
 
 .videos__intro {
   width: 240px;
   margin: 0 auto;
+  margin-bottom: 33px;
   padding: 0;
+}
+
+.videos {
+  margin-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
   .videos__p-title {
     font-size: 30px;
+    margin-top: 58px;
+    margin-bottom: 33px;
   }
 
   .videos__intro {
-    width: 420px;
+    width: 450px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .videos__p-title {
+    margin-top: 63px;
+  }
+
+  .videos {
+    margin-bottom: 83px;
   }
 }

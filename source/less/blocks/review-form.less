@@ -8,6 +8,8 @@
 
 .review-form__part {
   position: relative;
+  padding-top: 22px;
+  padding-bottom: 3px;
 }
 
 .review-form__part::before {
@@ -20,30 +22,63 @@
   background-color: @less-light-grey;
 }
 
-.review-form__label-input {
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-}
+.review-form__part--contactinfo {
+  padding-bottom: 12px;
 
-.review-form__part-title {
-  .base-title-style();
+  .review-form__part-title {
+    margin-bottom: 15px;
+  }
 }
 
 .review-form__label-input--presentation {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
   align-items: center;
+
   input {
     flex-grow: 1;
   }
 }
 
 .review-form__label-input--contactinfo {
-  // где я успела сделать flex ? в textfield.less
+  margin-bottom: 12px;
   flex-direction: column;
+
+  .textfield__label {
+    margin-bottom: 10px;
+  }
 
   label {
     margin-left: 20px;
   }
+}
+
+.review-form__part-title {
+  .base-title-style();
+  margin-bottom: 20px;
+}
+
+.review-form__label-input {
+  .radio__label {
+    margin-bottom: 43px;
+  }
+}
+
+.review-form__part--impression {
+  padding-bottom: 0;
+}
+
+.review-form__part--sights-visited {
+  padding-top: 15px;
+
+  .review-form__part-title {
+    margin-bottom: 5px;
+  }
+}
+
+.review-form__part--your-emotions {
+  margin-top: -20px;
 }
 
 .review-form__button {
@@ -71,6 +106,9 @@
 
   .review-form {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &::after {
       content: "";
@@ -86,12 +124,6 @@
   .review-form__footnote {
     display: block;
     margin: 0;
-  }
-
-  .review-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .review-form__part::before {
@@ -143,7 +175,7 @@
     width: 648px;
     height: 1px;
     // background-color: #dbdbdb;
-    background: linear-gradient(to right, #dbdbdb 100px,  @white 100px 548px, #dbdbdb 548px 648px);
+    background: linear-gradient(to right, #dbdbdb 100px, @white 100px 548px, #dbdbdb 548px);
     top: 13px;
     left: 0;
     z-index: -1;

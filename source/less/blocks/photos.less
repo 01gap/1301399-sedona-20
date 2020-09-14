@@ -42,10 +42,12 @@
 .photos__figcaption {
   margin-top: 10px;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .photos__like-thumb {
   margin-top: 10px;
+  text-align: left;
 }
 
 .photos__item-title {
@@ -68,14 +70,6 @@
   padding: 0;
 }
 
-.photos__figcaption {
-  text-align: left;
-}
-
-.photos__like-thumb {
-  text-align: left;
-}
-
 @media (min-width: @tablet-width) {
   .photos {
     width: @tablet-width - 60 * 2; // 648px
@@ -95,6 +89,7 @@
     padding-top: 16px;
     padding-left: 20px;
     padding-bottom: 16px;
+    background-color: @light-grey;
   }
 
   .photos__like-thumb {
@@ -129,10 +124,6 @@
   .photos__list-item--large,
   .photos__image--large {
     width: 648px;
-  }
-
-  .photos__figcaption {
-    background-color: @light-grey;
   }
 
   .photos__list-item:nth-child(2n+3) .photos__figcaption {

@@ -1,5 +1,3 @@
-// review-form.less
-
 .review-form__fieldset {
   border: none;
   margin: 0;
@@ -78,14 +76,19 @@
 }
 
 .review-form__part--your-emotions {
-  margin-top: -20px;
+  margin-top: -22px;
+  margin-bottom: 40px;
+
+  .review-form__part-title {
+    margin-bottom: 15px;
+  }
 }
 
 .review-form__button {
   display: block;
   width: 280px;
-  padding: 20px;
-  font-size: 18px;
+  padding: 19px;
+  font-size: 21px;
 }
 
 .review-form__footnote {
@@ -93,17 +96,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .review-section__title {
-    margin-top: 60px;
-    margin-bottom: 40px;
-  }
-
-  .review-section__intro {
-    width: 440px;
-    margin: 0 auto;
-    margin-bottom: 80px;
-  }
-
   .review-form {
     position: relative;
     display: flex;
@@ -117,13 +109,8 @@
       height: 292px;
       background-color: #dbdbdb;
       left: 50%;
-      top: 0;
+      top: 30px;
     }
-  }
-
-  .review-form__footnote {
-    display: block;
-    margin: 0;
   }
 
   .review-form__part::before {
@@ -135,37 +122,29 @@
   }
 
   .review-form__part--presentation {
-    width: 40%;
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 57px;
 
     .review-form__part-title {
       text-align: left;
-      margin-bottom: 50px;
+      margin-bottom: 56px;
     }
   }
 
   .review-form__part--impression {
     order: -2;
-    width: 45%;
+    width: 50%;
 
     .review-form__part-title {
       text-align: left;
-      margin-bottom: 50px;
+      margin-bottom: 58px;
     }
   }
 
-  .review-form__part--contactinfo {
-    width: 100%;
+  .review-form__label-input .radio__label {
+    margin-bottom: 52px;
   }
-
-  .review-form__part--sights-visited {
-    width: 100%;
-
-    .review-form__part-title {
-      width: 300px;
-      margin: 0 auto;
-    }
-  }
-
 
   .review-form__part--contactinfo::after,
   .review-form__part--sights-visited::after,
@@ -174,28 +153,114 @@
     position: absolute;
     width: 648px;
     height: 1px;
-    // background-color: #dbdbdb;
-    background: linear-gradient(to right, #dbdbdb 100px, @white 100px 548px, #dbdbdb 548px);
+    background: linear-gradient(to right, #dbdbdb 120px, transparent 100px 528px, #dbdbdb 528px);
     top: 13px;
     left: 0;
-    z-index: -1;
+  }
+
+  .review-form__part--contactinfo {
+    width: 100%;
+    margin-top: 10px;
+
+    &::after {
+      top: 32px;
+    }
+
+    .review-form__part-title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .review-form__label-input--contactinfo {
+    margin-bottom: 25px;
+  }
+
+  .review-form__part--sights-visited {
+    width: 100%;
+    padding-bottom: 0;
+    padding-top: 10px;
+
+    .review-form__part-title {
+      width: 300px;
+      margin: 0 auto;
+      margin-bottom: 28px;
+    }
+
+    &::after {
+      top: 35px;
+    }
   }
 
   .review-form__fieldset--sights-visited {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
   }
 
   .review-form__fieldset--sights-visited .checkbox {
     width: 50%;
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+      padding-left: 95px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 30px;
+    }
   }
 
   .review-form__part--your-emotions {
+    margin-top: 35px;
+    margin-bottom: 50px;
     width: 100%;
+
+    &::after {
+      top: 33px;
+    }
+
+    .review-form__part-title {
+      margin-bottom: 57px;
+    }
+  }
+
+  .review-form__button {
+    width: 50%;
+  }
+
+  .review-form__footnote {
+    display: inline;
+    margin: 0;
+    text-align: right;
+    align-self: center;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .review-form__part--impression {
+    .review-form__part-title {
+      padding-left: 80px;
+    }
+  }
+
+  .review-form__part--presentation {
+    padding-left: 80px;
+  }
+
+  .review-form__part--contactinfo {
+    .review-form__part-title {
+      margin-bottom: 73px;
+    }
+  }
+
+  .review-form__part--contactinfo::after,
+  .review-form__part--sights-visited::after,
+  .review-form__part--your-emotions::after {
+    width: 100%;
+    background: linear-gradient(to right, #dbdbdb 280px, transparent 280px 680px, #dbdbdb 680px);
+  }
+
   .review-form__label-input--contactinfo {
     flex-direction: row;
     align-items: center;
@@ -208,11 +273,38 @@
   }
 
   .review-form__part-wrapper--contactinfo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+
+    .review-form__label-input {
+      width: 50%;
+    }
   }
+
+  .review-form__part--sights-visited {
+    .review-form__part-title {
+      padding-top: 5px;
+    }
+
+    &::after {
+      top: 40px;
+    }
+  }
+
 
   .review-form__fieldset--sights-visited .checkbox {
     width: 25%;
+
+    &:nth-child(odd) {
+      padding-left: 0;
+    }
+
+    &:nth-child(even) {
+      padding-left: 0;
+    }
+  }
+
+  .review-form__part--your-emotions {
+    margin-top: 30px;
   }
 }

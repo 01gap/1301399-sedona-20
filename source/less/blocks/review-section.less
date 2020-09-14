@@ -1,6 +1,10 @@
+.review-section {
+  margin-bottom: 35px;
+}
+
 .review-section__title {
   .base-title-style();
-  margin-top: 35px;
+  margin-top: 40px;
   margin-bottom: 27px;
 }
 
@@ -12,9 +16,32 @@
 @media (min-width: @tablet-width) {
   .review-section {
     max-width: 648px;
+    margin-bottom: 60px;
   }
 
   .review-section__title {
     font-size: 30px;
+    margin-top: 60px;
+    margin-bottom: 35px;
+  }
+
+  .review-section__intro {
+    width: 440px;
+    margin: 0 auto;
+    margin-bottom: 63px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review-section {
+    max-width: 100%;
+  }
+
+  .review-section__title {
+    margin-top: 112px;
+  }
+
+  .review-section__intro {
+    margin-bottom: 35px;
   }
 }

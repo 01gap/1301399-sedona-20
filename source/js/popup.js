@@ -22,6 +22,7 @@ var onMessageEscPress = function (evt) {
 var closeMessage = function () {
   message.classList.add('modal--closed');
   document.removeEventListener('keydown', onMessageEscPress);
+  reviewForm.reset();
 };
 
 var openMessage = function (subj) {
@@ -36,20 +37,9 @@ var openMessage = function (subj) {
 
 submitButton.addEventListener('click', function (evt) {
   if (!firstName.value || !surname.value || !senderEmail.value || !senderTel.value) {
-    // evt.preventDefault();
     openMessage(MessageType.error);
   } else {
     evt.preventDefault();
     openMessage(MessageType.success);
   }
 });
-
-// reviewForm.addEventListener('submit', function (evt) {
-//   if (!firstName.value || !surname.value || !senderEmail.value || !senderTel.value) {
-//     evt.preventDefault();
-//     openMessage(MessageType.error);
-//   } else {
-//     evt.preventDefault();
-//     openMessage(MessageType.success);
-//   }
-// });

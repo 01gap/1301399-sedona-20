@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона: Форма отзыва</title>
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="stylesheet" href="css/styles.min.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="js/picturefill-min.js" async></script>
@@ -75,15 +76,18 @@
               <h2 class="review-form__part-title">Ваше общее впечатление:</h2>
               <fieldset class="review-form__fieldset">
                 <div class="review-form__label-input radio">
-                  <input class="radio__input visually-hidden--strong" id="mainly-positive-id" type="radio" name="impression" value="mainly-positive" checked>
+                  <input class="radio__input visually-hidden" id="mainly-positive-id" type="radio" name="impression"
+                    value="mainly-positive" checked>
                   <label class="radio__label" for="mainly-positive-id">Скорее положительное</label>
                 </div>
                 <div class="review-form__label-input radio">
-                  <input class="radio__input visually-hidden--strong" id="mainly-negative-id" type="radio" name="impression" value="mainly-negative">
+                  <input class="radio__input visually-hidden" id="mainly-negative-id" type="radio" name="impression"
+                    value="mainly-negative">
                   <label class="radio__label" for="mainly-negative-id">Скорее отрицательное</label>
                 </div>
                 <div class="review-form__label-input radio">
-                  <input class="radio__input visually-hidden--strong" id="hard-to-say-id" type="radio" name="impression" value="hard-to-say">
+                  <input class="radio__input visually-hidden" id="hard-to-say-id" type="radio" name="impression"
+                    value="hard-to-say">
                   <label class="radio__label" for="hard-to-say-id">Затрудняюсь ответить</label>
                 </div>
               </fieldset>
@@ -91,21 +95,23 @@
             <div class="review-form__part review-form__part--sights-visited">
               <h2 class="review-form__part-title">Посещенные достопримечательности:</h2>
               <fieldset class="review-form__fieldset review-form__fieldset--sights-visited">
-                <div class="review-form__label-input checkbox">
-                  <input class="checkbox__input visually-hidden--strong" id="devils-bridge-id" type="checkbox" name="devils-bridge" checked>
-                  <label class="checkbox__label" for="devils-bridge-id">Мост Дьявола</label>
-                </div>
-                <div class="review-form__label-input checkbox">
-                  <input class="checkbox__input visually-hidden--strong" id="mountain-bell-id" type="checkbox" name="mountain-bell" checked>
-                  <label class="checkbox__label" for="mountain-bell-id">Гора-Колокол</label>
-                </div>
-                <div class="review-form__label-input checkbox">
-                  <input class="checkbox__input visually-hidden--strong" id="slide-park-id" type="checkbox" name="slide-park" checked>
-                  <label class="checkbox__label" for="slide-park-id">Слайд-парк</label>
-                </div>
-                <div class="review-form__label-input checkbox">
-                  <input class="checkbox__input visually-hidden--strong" id="red-rocks-id" type="checkbox" name="red-rocks">
-                  <label class="checkbox__label" for="red-rocks-id">Красные скалы</label>
+                <div class="review-form__fieldset-inner">
+                  <div class="review-form__label-input checkbox">
+                    <input class="checkbox__input visually-hidden" id="devils-bridge-id" type="checkbox" name="devils-bridge" checked>
+                    <label class="checkbox__label" for="devils-bridge-id">Мост Дьявола</label>
+                  </div>
+                  <div class="review-form__label-input checkbox">
+                    <input class="checkbox__input visually-hidden" id="mountain-bell-id" type="checkbox" name="mountain-bell" checked>
+                    <label class="checkbox__label" for="mountain-bell-id">Гора-Колокол</label>
+                  </div>
+                  <div class="review-form__label-input checkbox">
+                    <input class="checkbox__input visually-hidden" id="slide-park-id" type="checkbox" name="slide-park" checked>
+                    <label class="checkbox__label" for="slide-park-id">Слайд-парк</label>
+                  </div>
+                  <div class="review-form__label-input checkbox">
+                    <input class="checkbox__input visually-hidden" id="red-rocks-id" type="checkbox" name="red-rocks">
+                    <label class="checkbox__label" for="red-rocks-id">Красные скалы</label>
+                  </div>
                 </div>
               </fieldset>
             </div>

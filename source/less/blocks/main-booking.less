@@ -19,12 +19,20 @@
   }
 }
 
-.main-booking__map {
-  display: block;
+.main-booking__iframe-map {
+  position: relative;
+  z-index: 2;
+  width: 320px;
+  height: 350px;
+  border: 0;
 }
 
-.main-booking__map-wrapper {
-  position: relative;
+.main-booking__map {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 1;
 
   &::after {
     content: "";
@@ -40,6 +48,10 @@
     border-radius: 50%;
     border: 5px solid @white;
   }
+}
+
+.main-booking__map-wrapper {
+  position: relative;
 }
 
 .main-booking__search-button {
@@ -78,6 +90,10 @@
       display: inline;
     }
   }
+
+  .main-booking__iframe-map {
+    width: @tablet-width;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -90,6 +106,10 @@
   }
 
   .main-booking__map {
+    width: @desktop-width;
+  }
+
+  .main-booking__iframe-map {
     width: @desktop-width;
   }
 }

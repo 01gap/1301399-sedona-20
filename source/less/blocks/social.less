@@ -1,7 +1,8 @@
 .social {
   display: flex;
   flex-wrap: wrap;
-  width: 153px;
+  min-width: 153px;
+  max-width: 310px; // before: 153px;
 }
 
 .social__item {
@@ -15,8 +16,12 @@
   margin-right: 6px;
   background-color: @base-blue;
 
-  &:nth-child(3n) {
+  &:nth-child(6n) {
     margin-right: 0;
+  }
+
+  &:nth-child(n+7) {
+    margin-top: 6px;
   }
 
   &::before {

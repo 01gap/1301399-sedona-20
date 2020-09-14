@@ -80,11 +80,12 @@ exports.html = html;
 
 const styles = () => {
   return gulp
-    .src('source/less/style.less')
+    .src('source/less/styles.less')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([autoprefixer()]))
+    .pipe(gulp.dest('build/css'))
     .pipe(csso())
     .pipe(rename('styles.min.css'))
     .pipe(sourcemap.write('.'))

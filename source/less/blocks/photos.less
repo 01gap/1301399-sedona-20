@@ -85,17 +85,21 @@
   }
 
   .photos__figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding-top: 16px;
     padding-left: 20px;
     padding-bottom: 16px;
+    padding-right: 20px;
     background-color: @light-grey;
   }
 
   .photos__like-thumb {
-    position: absolute;
-    right: 28px;
-    bottom: 28px;
+    width: 65px;
+    margin-top: 5px;
   }
 
   .photos__list-item--large .photos__like-thumb {

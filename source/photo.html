@@ -10,7 +10,7 @@
   </head>
   <body class="page__body">
     <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
+      <include src="img/sprite.svg"></include>
     </div>
     <div class="page__shadow-container">
       <header class="page-header">
@@ -53,16 +53,18 @@
                   </picture>
                 </a>
                 <figcaption class="photos__figcaption">
-                  <h3 class="photos__item-title">Неродные просторы</h3>
-                  <p class="photos__item-author">Автор фото: Борис</p>
+                  <div class="photos__title-author">
+                    <h3 class="photos__item-title">Неродные просторы</h3>
+                    <p class="photos__item-author">Автор фото: Борис</p>
+                  </div>
+                  <div class="like-thumb photos__like-thumb">
+                    <button class="like-thumb__button" type="button" name="button" aria-label="Мне нравится">
+                      <svg class="like-thumb__image" width="23" height="21"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                    </button>
+                    <span class="like-thumb__like-counter">1350</span>
+                  </div>
                 </figcaption>
               </figure>
-              <div class="like-thumb photos__like-thumb">
-                <button class="like-thumb__button" type="button" name="button" aria-label="Мне нравится">
-                  <svg class="like-thumb__image" width="23" height="21"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
-                </button>
-                <span class="like-thumb__like-counter">1350</span>
-              </div>
             </li>
             <li class="photos__list-item">
               <figure class="photos__figure">
@@ -77,15 +79,18 @@
                   </picture>
                 </a>
                 <figcaption class="photos__figcaption">
-                  <h3 class="photos__item-title">Местная растительность</h3>
-                  <p class="photos__item-author">Автор фото: Сергей</p></figcaption>
+                  <div class="photos__title-author">
+                    <h3 class="photos__item-title">Местная растительность</h3>
+                    <p class="photos__item-author">Автор фото: Сергей</p>
+                  </div>
+                  <div class="like-thumb photos__like-thumb">
+                    <button class="like-thumb__button" type="button" name="button" aria-label="Мне нравится">
+                      <svg class="like-thumb__image" width="23" height="21"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                    </button>
+                    <span class="like-thumb__like-counter">143</span>
+                  </div>
+                </figcaption>
               </figure>
-              <div class="like-thumb photos__like-thumb">
-                <button class="like-thumb__button" type="button" name="button" aria-label="Мне нравится">
-                  <svg class="like-thumb__image" width="23" height="21"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
-                </button>
-                <span class="like-thumb__like-counter">143</span>
-              </div>
             </li>
             <li class="photos__list-item">
               <figure class="photos__figure">
@@ -100,16 +105,18 @@
                   </picture>
                 </a>
                 <figcaption class="photos__figcaption">
-                  <h3 class="photos__item-title">Дорога на север</h3>
-                  <p class="photos__item-author">Автор фото: Петр</p>
+                  <div class="photos__title-author">
+                    <h3 class="photos__item-title">Дорога на север</h3>
+                    <p class="photos__item-author">Автор фото: Петр</p>
+                  </div>
+                  <div class="like-thumb photos__like-thumb">
+                    <button class="like-thumb__button" type="button" name="button" aria-label="Мне нравится">
+                      <svg class="like-thumb__image" width="23" height="21"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                    </button>
+                    <span class="like-thumb__like-counter">96</span>
+                  </div>
                 </figcaption>
               </figure>
-              <div class="like-thumb photos__like-thumb">
-                <button class="like-thumb__button" type="button" name="button" aria-label="Мне нравится">
-                  <svg class="like-thumb__image" width="23" height="21"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
-                </button>
-                <span class="like-thumb__like-counter">96</span>
-              </div>
             </li>
             <li class="photos__list-item">
               <figure class="photos__figure">
@@ -124,16 +131,18 @@
                   </picture>
                 </a>
                 <figcaption class="photos__figcaption">
-                  <h3 class="photos__item-title">Мост Дьявола</h3>
-                  <p class="photos__item-author">Автор фото: Антон</p>
+                  <div class="photos__title-author">
+                    <h3 class="photos__item-title">Мост Дьявола</h3>
+                    <p class="photos__item-author">Автор фото: Антон</p>
+                  </div>
+                  <div class="like-thumb photos__like-thumb">
+                    <button class="like-thumb__button" type="button" name="button" aria-label="Мне нравится">
+                      <svg class="like-thumb__image" width="23" height="21"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                    </button>
+                    <span class="like-thumb__like-counter">254</span>
+                  </div>
                 </figcaption>
               </figure>
-              <div class="like-thumb photos__like-thumb">
-                <button class="like-thumb__button" type="button" name="button" aria-label="Мне нравится">
-                  <svg class="like-thumb__image" width="23" height="21"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
-                </button>
-                <span class="like-thumb__like-counter">254</span>
-              </div>
             </li>
           </ul>
         </section>
@@ -152,19 +161,23 @@
               <img class="video-player__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="321" height="201" alt="Дорога на фоне горного пейзажа">
             </picture>
             <div class="video-player__controls video-controls">
-              <div class="video-controls__scale-toggle">
-                <div class="video-controls__scale"></div>
-                <div class="video-controls__toggle"></div>
+              <div class="video-controls__inner">
+                <div class="video-controls__scale-toggle">
+                  <div class="video-controls__scale"></div>
+                  <div class="video-controls__toggle"></div>
+                </div>
+                <button class="video-controls__replay" type="button" name="button" title="Посмотреть видео еще раз">
+                  <svg class="video-controls__icon-video-replay" width="16" height="20"><use xlink:href="img/sprite.svg#icon-video-replay"></use></svg>
+                </button>
+                <div class="video-controls__cc-fullscreen">
+                  <button class="video-controls__closed-caption" type="button" name="button" title="Скрытые субтитры">
+                    <svg class="video-controls__icon-video-subtitles" width="32" height="20"><use xlink:href="img/sprite.svg#icon-video-subtitles"></use></svg>
+                  </button>
+                  <button class="video-controls__fullscreen" type="button" name="button" title="Развернуть во весь экран">
+                    <svg class="video-controls__icon-video-fullscreen" width="20" height="20"><use xlink:href="img/sprite.svg#icon-video-fullscreen"></use></svg>
+                  </button>
+                </div>
               </div>
-              <button class="video-controls__replay" type="button" name="button" title="Посмотреть видео еще раз">
-                <svg class="video-controls__icon-video-replay" width="16" height="20"><use xlink:href="img/sprite.svg#icon-video-replay"></use></svg>
-              </button>
-              <button class="video-controls__closed-caption" type="button" name="button" title="Скрытые субтитры">
-                <svg class="video-controls__icon-video-subtitles" width="32" height="20"><use xlink:href="img/sprite.svg#icon-video-subtitles"></use></svg>
-              </button>
-              <button class="video-controls__fullscreen" type="button" name="button" title="Развернуть во весь экран">
-                <svg class="video-controls__icon-video-fullscreen" width="20" height="20"><use xlink:href="img/sprite.svg#icon-video-fullscreen"></use></svg>
-              </button>
             </div>
           </div>
         </section>
